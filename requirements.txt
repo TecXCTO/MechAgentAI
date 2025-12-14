@@ -2,7 +2,8 @@ google-adk
 google-adk[a2a]
 google-genai
 google-cloud-storage
-google-
+google-cloud-texttospeech
+google-cloud-vision
 numpy
 cadquery
 build123d
@@ -21,3 +22,4 @@ Matplotlib
 Plotly
 scipy 
 pandas
+vertexai
