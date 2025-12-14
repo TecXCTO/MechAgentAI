@@ -1,0 +1,1 @@
+# pip install CoolProp DynPy SfePy FEniCS Project Fluids CadQuery FreeCAD OpenMDAO OpenAeroStruct SymPy Matplotlib Plotly numpy scipy pandas
