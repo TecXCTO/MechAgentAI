@@ -1,7 +1,7 @@
 google-adk
 google-adk[a2a]
 google-genai
-google-cloud
+google-cloud-storage
 google-
 numpy
 cadquery
