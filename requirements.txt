@@ -23,3 +23,12 @@ Plotly
 scipy 
 pandas
 vertexai
+
+
+
+#Python Libraries for Genetic Algorithms
+#Popular libraries for genetic algorithms include:
+PyGAD #: This is a library for implementing genetic algorithms and optimizing machine learning algorithms, including neural networks.
+DEAP #: This is a framework for evolutionary algorithms.
+geneticalgorithm #: This library solves optimization problems.
+PyGenAlgo #: This is a research toolkit with genetic algorithms. 
