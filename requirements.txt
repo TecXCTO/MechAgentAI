@@ -11,7 +11,7 @@ python-dotenv
 CoolProp 
 DynPy 
 SfePy 
-FEniCS 
+##FEniCS 
 Project 
 Fluids
 FreeCAD 
