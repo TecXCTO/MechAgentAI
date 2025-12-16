@@ -11,7 +11,7 @@ python-dotenv
 CoolProp 
 DynPy 
 SfePy 
-##FEniCS 
+ 
 Project 
 Fluids
 FreeCAD 
@@ -23,8 +23,11 @@ Plotly
 scipy 
 pandas
 vertexai
-
-
+PyGAD
+DEAP
+geneticalgorithm
+PyGenAlgo
+##FEniCS
 
 #Python Libraries for Genetic Algorithms
 #Popular libraries for genetic algorithms include:
@@ -32,3 +35,4 @@ PyGAD #: This is a library for implementing genetic algorithms and optimizing ma
 DEAP #: This is a framework for evolutionary algorithms.
 geneticalgorithm #: This library solves optimization problems.
 PyGenAlgo #: This is a research toolkit with genetic algorithms. 
+geneticalgorithm
