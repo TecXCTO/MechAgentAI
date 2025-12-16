@@ -5,6 +5,7 @@
 generativeDesignAgent(Objectives, Constraints, ManufacturingMethod, MaterialData):
 
 asfg(float d):
+a=d
 
 
 
