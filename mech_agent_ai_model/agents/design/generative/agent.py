@@ -3,7 +3,9 @@
 #FUNCTION function Function 
 
 generativeDesignAgent(Objectives, Constraints, ManufacturingMethod, MaterialData):
-function a(d):
+
+a(d):
+
 
 
 # 1. Initialization Phase
