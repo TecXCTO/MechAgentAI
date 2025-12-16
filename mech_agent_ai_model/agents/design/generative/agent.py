@@ -2,30 +2,19 @@
 
 #FUNCTION function Function 
 
-generativeDesignAgent(Objectives, Constraints, ManufacturingMethod, MaterialData):
-
-asfg(float d):
-a=d
-
-
-
-# 1. Initialization Phase
-
-Population = GenerateInitialDesigns(Constraints, InitialSeedSize)
-while not TerminationCriteriaMet(Population):
-  # e.g., max iterations, performance goal reached
+def GenerativeDesignAgent(Objectives, Constraints, ManufacturingMethod, MaterialData):
+  # 1. Initialization Phase
+  Population = GenerateInitialDesigns(Constraints, InitialSeedSize)
+  while not TerminationCriteriaMet(Population):
+    # e.g., max iterations, performance goal reached
+    # 2. Analysis Phase
+    for Design in Population:
+      PerformanceMetrics[Design] = RunSimulation(Design, MaterialData, BoundaryConditions)
+    # 3. Evaluation and Ranking Phase
+    FitnessScores = EvaluateFitness(Population, PerformanceMetrics, Objectives)
+    #Rank Population based on FitnessScores
   
-  # 2. Analysis Phase
-  
-  for Design in Population:
-    PerformanceMetrics[Design] = RunSimulation(Design, MaterialData, BoundaryConditions)
-  
-  # 3. Evaluation and Ranking Phase
- 
-  FitnessScores = EvaluateFitness(Population, PerformanceMetrics, Objectives)
-  #Rank Population based on FitnessScores
-  
-  # 4. Evolution/Optimization Phase
+    # 4. Evolution/Optimization Phase
   
   NewPopulation = []
   BestDesigns = SelectBestPerformers(Population, SelectionCriteria)
@@ -35,7 +24,7 @@ while not TerminationCriteriaMet(Population):
   Offspring = Recombine(Parent1, Parent2, CrossoverAlgorithm)
   Offspring = Mutate(Offspring, MutationRate)
   #Add Offspring to NewPopulation
-  
+  #NewPopulation=Offspring
   Population = NewPopulation
     
   # 5. Monitoring
@@ -48,3 +37,4 @@ while not TerminationCriteriaMet(Population):
 
 
 #END FUNCTION
+
