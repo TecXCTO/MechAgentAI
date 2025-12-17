@@ -1,0 +1,6 @@
+#For Ubuntu/Debian-based systems (using apt)
+#The most straightforward method uses the deadsnakes PPA, which provides recent Python versions without interfering with the system's default Python installation. 
+#Update package lists and install PPA management tools:
+
+sudo apt update
+sudo apt install software-properties-common
