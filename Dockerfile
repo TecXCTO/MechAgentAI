@@ -1,5 +1,5 @@
 # Use an official Python 3.11 runtime as a parent image
-FROM python:3.11-slim
+FROM python:3.10-slim
 
 # Set the working directory in the container
 WORKDIR /usr/src/app
@@ -15,6 +15,9 @@ COPY requirements_all.txt ./
 
 # Install the dependencies
 RUN pip install --no-cache-dir -r requirements_all.txt
+
+
+python3.10 -m venv .mechagentai
 
 
 # Copy the rest of your application code (if any)
