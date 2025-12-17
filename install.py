@@ -1,6 +1,6 @@
 import subprocess
-installed_list=[]
-un_installed_list=[]
+installed_list=[[]]
+un_installed_list=[[]]
 with open('requirements.txt', 'r') as f:
     for line in f:
         package = line.strip()
