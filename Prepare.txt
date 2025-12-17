@@ -16,3 +16,23 @@ sudo apt update
 sudo apt install python3.10 python3.10-venv
 
 
+
+##########.        #########
+
+for bash:-
+
+while read p; do pip install "$p"; done < requirements.txt
+
+
+or
+
+for pwershell:-
+
+Get-Content requirements.txt | ForEach-Object { pip install $_ }
+
+
+
+or
+
+
+python code
