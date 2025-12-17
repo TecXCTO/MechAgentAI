@@ -7,9 +7,11 @@ with open('requirements.txt', 'r') as f:
         if package and not package.startswith('#'):
             try:
                 subprocess.check_call(['pip', 'install', package])
-                installed_list.extend(package)
+                installed_list.append(package)
+                #installed_list.extend(package)
             except subprocess.CalledProcessError:
-                un_installed_list.extend(package)
+                un_installed_list.append(package)
+                #un_installed_list.extend(package)
                 print(f"Failed to install {package}. Skipping...")
 with open('requirements_all.txt', 'r') as f:
     for line in f:
@@ -17,11 +19,11 @@ with open('requirements_all.txt', 'r') as f:
         if package and not package.startswith('#'):
             try:
                 subprocess.check_call(['pip', 'install', package])
-                installed_list.join(package)
+                installed_list.append(package)
                 #installed_list.extend(package)
             except subprocess.CalledProcessError:
                 print(f"Failed to install {package}. Skipping...")
-                un_installed_list.join(package)
+                un_installed_list.append(package)
                 #un_installed_list.extend(package)
 with open('installed_list.txt', 'w') as f:
     #f.writelines([j + '\n' for i,j in installed_list])
