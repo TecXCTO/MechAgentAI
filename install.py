@@ -10,7 +10,7 @@ with open('requirements.txt', 'r') as f:
             except subprocess.CalledProcessError:
                 print(f"Failed to install {package}. Skipping...")
               
-with open('requirements_full.txt', 'r') as f:
+with open('requirements_all.txt', 'r') as f:
     for line in f:
         package = line.strip()
         if package and not package.startswith('#'):
