@@ -10,7 +10,7 @@ build123d
 python-dotenv
 CoolProp 
 DynPy 
-SfePy 
+ 
  
 Project 
 Fluids
@@ -27,6 +27,7 @@ PyGAD
 DEAP
 geneticalgorithm
 PyGenAlgo
+SfePy
 ##FEniCS
 
 #Python Libraries for Genetic Algorithms
