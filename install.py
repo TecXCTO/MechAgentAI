@@ -16,9 +16,11 @@ with open('requirements_all.txt', 'r') as f:
         if package and not package.startswith('#'):
             try:
                 subprocess.check_call(['pip', 'install', package])
-                installed_list=package
+                installed_list.extend(package)
+                #=package
             except subprocess.CalledProcessError:
                 print(f"Failed to install {package}. Skipping...")
-                un_installed_list=package
+                un_installed_list.extend(package)
+                #package
 
-print(f"Installed Python Packages List: {installed_list}\n Uninstalled Python Packages List: {un_installed_list}\n ")
+print(f"Installed Python Packages List: {installed_list}/n Uninstalled Python Packages List: {un_installed_list}/n ")
