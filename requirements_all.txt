@@ -1,0 +1,66 @@
+# Core Digital Twin Simulation & AI
+numpy
+pandas
+scipy
+simpy
+openmdao
+pybullet
+mujoco
+python-control
+sympy
+scikit-learn
+tensorflow
+torch
+xgboost
+pywavelets
+
+# IoT & Cloud Connectivity
+paho-mqtt
+opcua
+requests
+flask
+fastapi
+uvicorn
+pymodbus
+pyserial
+azure-iot-device
+boto3
+mindsphere-python
+google-cloud-iot
+thingworx-python-sdk
+ibm-watson-iot
+
+# 3D Visualization & CAD
+pythreejs
+vtk
+mayavi
+plotly
+matplotlib
+pythonocc-core
+cadquery
+freecad
+pyglet
+dash
+streamlit
+
+# Cloud & Analytics Tools
+influxdb-client
+kafka-python
+pyspark
+redis
+firebase-admin
+panel
+bokeh
+streamlit
+
+# Domain-Specific Libraries
+eppy
+pyidf
+ifcopenshell
+bimpy
+blenderbim
+openfoam-python
+ansys-twin-builder
+
+
+#
