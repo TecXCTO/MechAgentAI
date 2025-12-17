@@ -39,4 +39,4 @@ with open('un_installed_list.txt', 'w') as f:
         # Join characters with a delimiter (like a comma or space) for readability
         line = "".join(package_list)
         f.write(line + "\n")
-print(f"Installed Python Packages List: {installed_list}/n Uninstalled Python Packages List: {un_installed_list}/n ")
+print(f"Installed Python Packages List: {installed_list} /n Uninstalled Python Packages List: {un_installed_list} /n ")
