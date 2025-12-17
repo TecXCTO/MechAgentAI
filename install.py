@@ -21,4 +21,4 @@ with open('requirements_all.txt', 'r') as f:
                 print(f"Failed to install {package}. Skipping...")
                 un_installed_list=package
 
-print(f"Installed Python Packages List: {installed_list}/n Uninstalled Python Packages List: {un_installed_list}/n ")
+print(f"Installed Python Packages List: {installed_list}\n Uninstalled Python Packages List: {un_installed_list}\n ")
