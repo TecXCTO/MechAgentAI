@@ -81,17 +81,7 @@ logging.basicConfig(
     level=logging.DEBUG,
     format="%(filename)s:%(lineno)s %(levelname)s:%(message)s",
 )
-
 print("✅ Logging configured")
-
-#try:
-    #GOOGLE_API_KEY = UserSecretsClient().get_secret("GOOGLE_API_KEY")
-    #os.environ["GOOGLE_API_KEY"] = GOOGLE_API_KEY
-    #print("✅ Gemini API key setup complete.")
-#except Exception as e:
-    #print(
-        #f"🔑 Authentication Error: Please make sure you have added 'GOOGLE_API_KEY' to your Kaggle secrets. Details: {e}"
-    #)
 
 retry_config=types.HttpRetryOptions(
     attempts=5,  # Maximum retry attempts
