@@ -1,9 +1,114 @@
 
 # In agent.py
 from .custom_functions import get_fx_rate  # Relative import
+#from google.adk.agents.llm_agent import Agent
+
+
+import asyncio
+import logging
+import os
+import uuid
+
+#from kaggle_secrets import UserSecretsClient
+
+#from google.adk.agents import Agent
+#from google.adk.agents import LlmAgent
+#from google.adk.agents import Agent, SequentialAgent, ParallelAgent, LoopAgent
+from google.adk.agents import Agent, SequentialAgent, ParallelAgent, LoopAgent,LlmAgent
+
+from google.adk.agents.base_agent import BaseAgent
+from google.adk.agents.callback_context import CallbackContext
 from google.adk.agents.llm_agent import Agent
+#from google.adk.apps.app import App, EventsCompactionConfig
+#from google.adk.apps.app import App, ResumabilityConfig
+from google.adk.apps.app import App, EventsCompactionConfig, ResumabilityConfig
+
+from google.adk.code_executors import BuiltInCodeExecutor
+
+
+from google.adk.models.google_llm import Gemini
+from google.adk.models.llm_request import LlmRequest
+
+from google.adk.memory import InMemoryMemoryService
+
+from google.adk.plugins.base_plugin import BasePlugin
+from google.adk.plugins.logging_plugin import (
+    LoggingPlugin,
+)  # <---- 1. Import the Plugin
+
+
+#from google.adk.runners import InMemoryRunner
+#from google.adk.runners import Runner
+from google.adk.runners import InMemoryRunner, Runner
+
+
+#from google.adk.sessions import InMemorySessionService
+#from google.adk.sessions import DatabaseSessionService
+from google.adk.sessions import DatabaseSessionService, InMemorySessionService
+
+#from google.adk.tools import google_search
+#from google.adk.tools import AgentTool, FunctionTool, google_search
+#from google.adk.tools import google_search, AgentTool, ToolContext
+#from google.adk.tools import load_memory, preload_memory
+
+from google.adk.tools import AgentTool, FunctionTool, google_search, load_memory, preload_memory, ToolContext 
+from google.adk.tools.function_tool import FunctionTool
+from google.adk.tools.google_search_tool import google_search
+
+from google.adk.tools.mcp_tool.mcp_toolset import McpToolset
+from google.adk.tools.mcp_tool.mcp_session_manager import StdioConnectionParams
+from google.adk.tools.tool_context import ToolContext
+
+from google.genai import types
+
+from mcp import StdioServerParameters
+#from typing import Any, Dict
+#from typing import List
+from typing import Any, Dict, List
+
+
+print("✅ ADK components imported successfully.")
+
+# Clean up any previous logs
+for log_file in ["logger.log", "web.log", "tunnel.log"]:
+    if os.path.exists(log_file):
+        os.remove(log_file)
+        print(f"🧹 Cleaned up {log_file}")
+
+# Configure logging with DEBUG log level.
+logging.basicConfig(
+    filename="logger.log",
+    level=logging.DEBUG,
+    format="%(filename)s:%(lineno)s %(levelname)s:%(message)s",
+)
+
+print("✅ Logging configured")
+
+#try:
+    #GOOGLE_API_KEY = UserSecretsClient().get_secret("GOOGLE_API_KEY")
+    #os.environ["GOOGLE_API_KEY"] = GOOGLE_API_KEY
+    #print("✅ Gemini API key setup complete.")
+#except Exception as e:
+    #print(
+        #f"🔑 Authentication Error: Please make sure you have added 'GOOGLE_API_KEY' to your Kaggle secrets. Details: {e}"
+    #)
+
+retry_config=types.HttpRetryOptions(
+    attempts=5,  # Maximum retry attempts
+    exp_base=7,  # Delay multiplier
+    initial_delay=1,
+    http_status_codes=[429, 500, 503, 504], # Retry on these HTTP errors
+)
+
 
 root_agent = Agent(
+    model='gemini-2.5-flash-lite',
+    name='root_agent',
+    description='A helpful assistant for user questions.',
+    instruction='Answer user questions to the best of your knowledge',
+#)
+#root_agent = Agent(
     # ... other parameters ...
     tools=[get_fx_rate],
 )
+print(f'Hi, I am your Mechanical Agent AI Assistant.')
