@@ -15,7 +15,9 @@ def get_fx_rate(base: str, target: str) -> dict:
 
 import json
 # Assume you have these functions that wrap your model APIs
-from your_audio_api import generate_audio from your_visual_api import generate_image from your_llm_api import query_llm
+from your_audio_api import generate_audio 
+from your_visual_api import generate_image 
+from your_llm_api import query_llm
 from your_multimodal_api import process multimodal
 def agent_loop(user_input)：
 # Decision logic (simplified example)
