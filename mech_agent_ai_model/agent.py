@@ -104,11 +104,23 @@ retry_config=types.HttpRetryOptions(
 root_agent = Agent(
     model='gemini-2.5-flash-lite',
     name='root_agent',
-    description='A helpful assistant for user questions.',
-    instruction='Answer user questions to the best of your knowledge',
-#)
-#root_agent = Agent(
+    description='A helpful assistant cum co-worker, as servent responsible for user's all questions, orders, commands, instructions, restrictions.',
+    instruction='Answer user questions to the best of your knowledge and do jobs given by user, while keep following all given user questions, order, command, instruction, restrictions. reply and response properly with complete details accordingly best your knoledge.',
     # ... other parameters ...
     tools=[get_fx_rate],
 )
 print(f'Hi, I am your Mechanical Agent AI Assistant.')
+
+print("MechAgentAI Assitant agent setup complete.")
+runner = InMemoryRunner(agent=root_agent)
+
+print("Runner created.")
+prompt=""
+async def main_task():
+    while True:
+        prompt=input("Hello, Welcome to Mechanical Agentic AI. Please start your work, by giving me commands.")
+        response = await runner.run_debug(prompt)
+
+if __name__ == "__main__":
+    asyncio.run(main_task()) # Run the async function using the asyncio event loop
+
