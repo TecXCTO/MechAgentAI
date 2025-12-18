@@ -104,7 +104,7 @@ retry_config=types.HttpRetryOptions(
 root_agent = Agent(
     model='gemini-2.5-flash-lite',
     name='root_agent',
-    description='A helpful assistant cum co-worker, as servent responsible for user's all questions, orders, commands, instructions, restrictions.',
+    description="""A helpful assistant cum co-worker, as servent responsible for user's all questions, orders, commands, instructions, restrictions.""",
     instruction = """Answer user questions to the best of your knowledge and do jobs given by user, while keep following all given user questions, order, command, instruction, restrictions. reply and response properly with complete details accordingly best your knoledge.""",
     # ... other parameters ...
     tools=[get_fx_rate],
