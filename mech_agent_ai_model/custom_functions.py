@@ -19,7 +19,7 @@ from your_audio_api import generate_audio
 from your_visual_api import generate_image 
 from your_llm_api import query_llm
 from your_multimodal_api import process multimodal
-
+import get_image_reference_from_context
 def agent_loop(user_input):
     # Decision logic (simplified example)
     if("audio" in user_input.loader() or"sound" in user_input.loader()):
@@ -31,11 +31,11 @@ def agent_loop(user_input):
         image_output = generate_image(user_input)
         return f"Here's your image: (image_output)"
     elif("describe this image" in user_input.loader() or "what is in this image” in user_input.loader()):
-    # This would require passing an image reference
+         # This would require passing an image reference
         image_ref = get_image_reference_from_context(user_input)
-    # Function to get image
-multimodal_output = process multimodal(prompt=user_input, image=image_ref)
-return multimodal output
+        # Function to get image
+        multimodal_output = process multimodal(prompt=user_input, image=image_ref)
+        return multimodal_output
     else:
         llm_output = query_llm(user_input)
         return llm_output
