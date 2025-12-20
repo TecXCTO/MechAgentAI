@@ -32,7 +32,8 @@ def agent_loop(user_input):
         return f"Here's your image: (image_output)"
     elif ("describe this image" in user_input.loader() or "what is in this image” in user_input.loader()):
     # This would require passing an image reference
-image_ref = get_image_reference_from_context(user_input) # Function to get image
+        image_ref = get_image_reference_from_context(user_input)
+    # Function to get image
 multimodal_output = process multimodal(prompt=user_input, image=image_ref)
 return multimodal output
 else
