@@ -97,7 +97,7 @@ root_agent = Agent(
     description="""A helpful assistant cum co-worker, as servent responsible for user's all questions, orders, commands, instructions, restrictions.""",
     instruction = """Answer user questions to the best of your knowledge and do jobs given by user, while keep following all given user questions, order, command, instruction, restrictions. reply and response properly with complete details accordingly best your knoledge.""",
     # ... other parameters ...
-    tools=[get_fx_rate],
+    #tools=[get_fx_rate],
     output_key="root_record",  # The result of this agent will be stored in the session state with this key.
 )
 print(f'Hi, I am your Mechanical Agent AI Assistant.')
