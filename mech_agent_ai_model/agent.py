@@ -1,6 +1,6 @@
 
 # In agent.py
-from .custom_functions import get_fx_rate  # Relative import
+#from .custom_functions import get_fx_rate  # Relative import
 #from google.adk.agents.llm_agent import Agent
 
 
