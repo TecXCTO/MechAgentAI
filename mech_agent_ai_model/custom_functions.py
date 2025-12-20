@@ -20,6 +20,7 @@ from your_visual_api import generate_image
 from your_llm_api import query_llm
 from your_multimodal_api import process multimodal
 import get_image_reference_from_context
+
 def agent_loop(user_input):
     # Decision logic (simplified example)
     if("audio" in user_input.loader() or"sound" in user_input.loader()):
