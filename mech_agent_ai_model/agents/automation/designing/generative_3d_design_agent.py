@@ -1,6 +1,6 @@
-```
 '''
-# 3D Designing Automation
+
+3D Designing Automation
 
 * AI Capabilities:
 Generative Design: Using AI algorithms (like Generative Adversarial Networks - GANs, or variational 
@@ -24,5 +24,5 @@ CAD Software APIs (e.g., SolidWorks API, Fusion 360 API, Onshape API)
 Geometric Deep Learning (e.g., PointNet, DGCNN)
 Reinforcement Learning for design exploration
 Optimization algorithms (e.g., genetic algorithms, Bayesian optimization)
+
 '''
-```
