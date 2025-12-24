@@ -10,7 +10,9 @@ Quality Control: AI-powered computer vision systems for automated inspection of 
 Process Optimization: AI that monitors production parameters in real-time and suggests adjustments to improve yield, reduce waste, and optimize cycle times.
 Production Scheduling: AI that can create and optimize production schedules based on demand, resource availability, and manufacturing constraints.
 Predictive Maintenance for Manufacturing Equipment: AI to forecast equipment failures and schedule maintenance proactively.
+
 Data Requirements: Manufacturing process parameters, machine capabilities, material properties, production schedules, quality inspection data, sensor data from factory floor.
+
 Tools/Technologies:
 CAM software APIs
 Robotics simulation and control platforms
