@@ -38,7 +38,7 @@ def export_any_file(alias: str, destination_path: str) -> str:
 # 4. Agent Definition
 file_manager_agent = Agent(
     name="Universal_Data_Agent",
-    model="gemini-2.5-flash", # Best 2025 model for fast multimodal routing
+    model="gemini-2.5-flash-lite", # Best 2025 model for fast multimodal routing
     instruction=(
         "You are a file logistics expert. You can handle files of ANY size. "
         "When a user provides a link or path to 'import', use 'import_any_file'. "
